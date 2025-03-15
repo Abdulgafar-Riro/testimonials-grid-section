@@ -1,0 +1,106 @@
+// Color Variables
+$Purple50: hsl(260, 100%, 95%);
+$Purple300: hsl(264, 82%, 80%);
+$Purple500: hsl(263, 55%, 52%);
+$White: hsl(0, 0%, 100%);
+$Grey100: hsl(214, 17%, 92%);
+$Grey200: hsl(0, 0%, 81%);
+$Grey400: hsl(224, 10%, 45%);
+$Grey500: hsl(217, 19%, 35%);
+$Darkblue: hsl(219, 29%, 14%);
+$Black: hsl(0, 0%, 7%);
+
+// Mixin for card top border color
+@mixin card-background($color) {
+  background-color: $color;
+}
+
+// Global Styles
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 13px;
+  font-family: 'Barlow', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  width: 280px;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $Grey500;
+}
+
+// Card Styles
+.card {
+  border: none;
+  border-radius: 0.4rem;
+  box-shadow: 0 15px 35px $Grey400;
+  margin: 2rem 0;
+  padding: 2.5rem;
+  width: 18.4rem;
+  font-weight: 550;
+  line-height: 1.2rem;
+  color: $White;
+
+  header {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    margin-bottom: 10px;
+
+    img {
+      width: 2.5rem;
+      border-radius: 50%;
+      border: 2px solid $Purple300;
+      
+    }
+
+    .profile-info {
+      line-height: 1.5;
+      margin-top: 10px;
+
+      p {
+        padding-top: 0;
+      }
+    }
+  }
+
+  h2 {
+    line-height: 1.5rem;
+    padding: 12px 0;
+    width: 26ch;
+  }
+
+  p {
+    padding: 10px 0;
+  }
+
+  // Use mixin for card top border
+  &.purple { @include card-background($Purple500); }
+  &.grey { @include card-background($Grey500); }
+  &.white { 
+    @include card-background($White);
+    color: $Black
+   }
+  &.dark-blue { @include card-background($Darkblue); }
+}
+
+// Attribution Styles
+.attribution {
+  font-size: 11px;
+  text-align: center;
+
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}

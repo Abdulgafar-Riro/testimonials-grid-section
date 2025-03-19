@@ -69,6 +69,10 @@ body {
   line-height: 1.5;
   margin-top: 10px;
 }
+.card header .profile-info h1 {
+  font-weight: 600;
+  font-size: 15px;
+}
 .card header .profile-info p {
   padding-top: 0;
 }
@@ -104,7 +108,7 @@ body {
   color: hsl(228, 45%, 44%);
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1024px) {
   body {
     width: 100vw;
   }

@@ -93,6 +93,11 @@ body {
       line-height: 1.5;
       margin-top: 10px;
 
+      h1 {
+        font-weight: 600;
+        font-size: 15px;
+      }
+
       p {
         padding-top: 0;
       }
@@ -132,7 +137,7 @@ body {
 }
 
 // Responsive Media Queries
-@media (min-width: 800px){
+@media (min-width: 1024px){
   body {
     width: 100vw;
   }

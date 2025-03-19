@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Barlow Semi Condensed';
+  src: url('../fonts/BarlowSemiCondensed-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Barlow Semi Condensed';
+  src: url('../fonts/BarlowSemiCondensed-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;;
+}
+
 // Color Variables
 $Purple50: hsl(260, 100%, 95%);
 $Purple300: hsl(264, 82%, 80%);
@@ -24,7 +38,8 @@ $Black: hsl(0, 0%, 7%);
 
 body {
   font-size: 13px;
-  font-family: 'Barlow', sans-serif;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: 500;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,9 +70,8 @@ body {
   border: none;
   border-radius: 0.4rem;
   box-shadow: 0 5px 55px $Grey400;
-  padding: 1rem 2.5rem;
-  width: 100%;
-  font-weight: 550;
+  padding: 1rem 2rem;
+  width: 19rem; // or 84%
   line-height: 1.2rem;
   color: $White;
 
@@ -66,6 +80,7 @@ body {
     align-items: center;
     column-gap: 20px;
     margin-bottom: 10px;
+    
 
     img {
       width: 2.5rem;
@@ -85,8 +100,10 @@ body {
   }
 
   h2 {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 600;
     line-height: 1.5rem;
-    padding: 12px 0;
+    padding: 12px 3px;
   }
 
   p {
@@ -107,6 +124,7 @@ body {
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin-bottom: 3rem;
 
   a {
     color: hsl(228, 45%, 44%);
@@ -114,7 +132,7 @@ body {
 }
 
 // Responsive Media Queries
-@media (min-width: 500px){
+@media (min-width: 1040px){
   body {
     width: 100vw;
   }
@@ -124,7 +142,7 @@ body {
     display: grid;
     grid-template-columns: 3fr 1fr;
     align-items: start;
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
   .grid-1 {
@@ -133,7 +151,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(100px, auto);
-    gap: 1.5rem;
+    gap: 1rem;
     align-items: start;
   }
 
@@ -153,6 +171,10 @@ body {
   .dark-blue {
     grid-column: span 2;
     width: 100%;
+
+    h2 {
+      font-weight: 500;
+    }
   }
 
   .white, .grey {

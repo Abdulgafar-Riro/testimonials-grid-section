@@ -104,13 +104,15 @@ body {
   color: hsl(228, 45%, 44%);
 }
 
-@media (min-width: 1040px) {
+@media (min-width: 800px) {
   body {
     width: 100vw;
   }
   .cards-container {
     width: 100%;
-    max-width: 1350px;
+    max-width: 1200px;
+    margin: 10rem;
+    padding: 3.4rem;
     display: grid;
     grid-template-columns: 3fr 1fr;
     align-items: start;
@@ -138,12 +140,16 @@ body {
   .dark-blue {
     grid-column: span 2;
     width: 100%;
+    padding: 1rem 1.55rem;
   }
   .dark-blue h2 {
     font-weight: 500;
   }
   .white, .grey {
     width: 100%;
+  }
+  .Kira-white {
+    padding: 1rem 2.45rem;
   }
 }
 

@@ -19,6 +19,7 @@ $Black: hsl(0, 0%, 7%);
 *, ::before, ::after {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -28,26 +29,34 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-width: 100vw;
 }
 
-.main-container {
-  width: 280px;
-  padding: 1rem 2rem;
+.cards-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background-color: $Grey500;
+  gap: 2rem;
+  width: 100%;
+  max-width: 425px;
+  margin: 3rem 0;
+  padding: 2rem;
+}
+
+.grid-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 }
 
 // Card Styles
 .card {
   border: none;
   border-radius: 0.4rem;
-  box-shadow: 0 15px 35px $Grey400;
-  margin: 2rem 0;
-  padding: 2.5rem;
-  width: 18.4rem;
+  box-shadow: 0 5px 55px $Grey400;
+  padding: 1rem 2.5rem;
+  width: 100%;
   font-weight: 550;
   line-height: 1.2rem;
   color: $White;
@@ -78,7 +87,6 @@ body {
   h2 {
     line-height: 1.5rem;
     padding: 12px 0;
-    width: 26ch;
   }
 
   p {
@@ -103,4 +111,52 @@ body {
   a {
     color: hsl(228, 45%, 44%);
   }
+}
+
+// Responsive Media Queries
+@media (min-width: 500px){
+  body {
+    width: 100vw;
+  }
+  .cards-container {
+    width: 100%;
+    max-width: 1350px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: start;
+    gap: 1.5rem;
+  }
+
+  .grid-1 {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .card {
+   height: 100%;
+
+   p {
+    font-weight: 500;
+   }
+  }
+
+  .purple {
+    grid-column: span 2;
+    width: 100%;
+  }
+
+  .dark-blue {
+    grid-column: span 2;
+    width: 100%;
+  }
+
+  .white, .grey {
+    width: 100%;
+  }
+
 }

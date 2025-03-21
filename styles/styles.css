@@ -17,14 +17,13 @@
 }
 
 body {
-  font-size: 13px;
+  font-size: 15px;
   font-family: "Barlow Semi Condensed", sans-serif;
   font-weight: 500;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 100vw;
 }
 
 .cards-container {
@@ -48,9 +47,9 @@ body {
 .card {
   border: none;
   border-radius: 0.4rem;
-  box-shadow: 0 5px 55px hsl(224, 10%, 45%);
-  padding: 1rem 2rem;
-  width: 19rem;
+  box-shadow: 0 10px 35px hsl(224, 10%, 45%);
+  padding: 2rem;
+  width: 21.2rem;
   line-height: 1.2rem;
   color: hsl(0, 0%, 100%);
 }
@@ -61,7 +60,7 @@ body {
   margin-bottom: 10px;
 }
 .card header img {
-  width: 2.5rem;
+  width: 2.3rem;
   border-radius: 50%;
   border: 2px solid hsl(264, 82%, 80%);
 }
@@ -69,20 +68,23 @@ body {
   line-height: 1.5;
   margin-top: 10px;
 }
-.card header .profile-info h1 {
+.card header .profile-info h2 {
+  font-family: "Barlow Semi Condensed", sans-serif;
   font-weight: 600;
   font-size: 15px;
 }
 .card header .profile-info p {
   padding-top: 0;
 }
-.card h2 {
+.card h3 {
   font-family: "Barlow Semi Condensed", sans-serif;
   font-weight: 600;
+  font-size: 22px;
   line-height: 1.5rem;
-  padding: 12px 3px;
+  margin-bottom: 15px;
 }
 .card p {
+  font-weight: 500;
   padding: 10px 0;
 }
 .card.purple {
@@ -114,13 +116,13 @@ body {
   }
   .cards-container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 86rem;
     margin: 10rem;
-    padding: 3.4rem;
+    padding: 2rem;
     display: grid;
     grid-template-columns: 3fr 1fr;
     align-items: start;
-    gap: 1rem;
+    gap: 2rem;
   }
   .grid-1 {
     width: 100%;
@@ -128,14 +130,13 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(100px, auto);
-    gap: 1rem;
+    column-gap: 2rem;
+    row-gap: 1.5rem;
     align-items: start;
   }
   .card {
     height: 100%;
-  }
-  .card p {
-    font-weight: 500;
+    padding: 1rem 2.5rem;
   }
   .purple {
     grid-column: span 2;
@@ -144,17 +145,14 @@ body {
   .dark-blue {
     grid-column: span 2;
     width: 100%;
-    padding: 1rem 1.55rem;
-  }
-  .dark-blue h2 {
-    font-weight: 500;
   }
   .white, .grey {
     width: 100%;
   }
-  .Kira-white {
-    padding: 1rem 2.45rem;
-  }
+  /*
+    .Kira-white {
+      padding: 1rem 2.7rem;
+    }*/
 }
 
 /*# sourceMappingURL=styles.css.map */

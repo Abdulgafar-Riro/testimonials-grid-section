@@ -52,7 +52,6 @@ body {
   align-items: center;
   gap: 2rem;
   width: 100%;
-  max-width: 425px;
   margin: 3rem 0 1 rem 0;
   padding: 2rem;
 }
@@ -112,7 +111,6 @@ body {
   }
 
   p {
-    font-weight: 500;
     padding: 10px 0;
   }
 
@@ -144,7 +142,7 @@ body {
   }
   .cards-container {
     width: 100%;
-    max-width: 86rem;
+    max-width: 84.5rem;
     margin: 10rem 0 1rem 0;
     padding: 2rem;
     display: grid;
@@ -170,6 +168,9 @@ body {
     //padding-left: 2.5rem;
     //padding-right: 2.8rem;
     
+    h3 {
+      font-size: 23px;
+    }
   }
 
   .purple {
